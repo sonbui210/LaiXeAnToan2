@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".MainActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="100dp"
+        android:clipToPadding="false">
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottom_app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:fabAlignmentMode="center"
+        app:fabCradleRoundedCornerRadius="36dp"
+        app:fabCradleMargin="18dp"
+        app:hideOnScroll="true">
+
+
+        <!--<LinearLayout
+            android:id="@+id/bottom_app_bar_content_container"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/min_touch_target_size"
+            android:layout_marginVertical="@dimen/grid_0_5"
+            android:paddingHorizontal="@dimen/grid_0_5"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:foreground="@drawable/bottom_app_bar_title_foreground">
+
+            <ImageView
+                android:id="@+id/bottom_app_bar_chevron"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                app:tint="?attr/colorOnPrimarySurface"
+                app:srcCompat="@drawable/ic_arrow_drop_up" />
+
+            <ImageView
+                android:id="@+id/bottom_app_bar_logo"
+                android:layout_width="@dimen/bottom_app_bar_logo_size"
+                android:layout_height="@dimen/bottom_app_bar_logo_size"
+                android:layout_marginLeft="@dimen/grid_1"
+                android:layout_gravity="center_vertical"
+                app:srcCompat="@drawable/ic_reply_logo" />
+
+            <TextView
+                android:id="@+id/bottom_app_bar_title"
+                android:textAppearance="?attr/textAppearanceBody1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginHorizontal="@dimen/grid_1"
+                android:text="Xem"
+                android:textColor="?attr/colorControlNormal"/>
+
+        </LinearLayout>-->
+    </com.google.android.material.bottomappbar.BottomAppBar>
+
+        <include layout="@layout/content_main" />
+
+    <!--<fragment
+        android:id="@+id/nav_host_fragment_content_main"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:defaultNavHost="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navGraph="@navigation/nav_graph" />-->
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/asl_edit_reply"
+        app:layout_anchor="@id/bottom_app_bar"
+        android:contentDescription="Kiểm tra"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

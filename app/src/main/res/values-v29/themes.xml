@@ -1,0 +1,9 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Theme.LaiXeAnToan" parent="Base.Theme.LaiXeAnToan">
+        <!-- Transparent system bars for edge-to-edge. -->
+        <item name="android:navigationBarColor">@color/reply_blue_700</item>
+        <item name="android:statusBarColor">@color/reply_blue_700</item>
+        <item name="android:windowLightStatusBar">?attr/isLightTheme</item>
+    </style>
+</resources>
