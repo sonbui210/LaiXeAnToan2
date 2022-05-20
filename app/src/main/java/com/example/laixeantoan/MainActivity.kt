@@ -35,6 +35,13 @@ class MainActivity : AppCompatActivity() {
                 .setAnchorView(R.id.fab)
                 .setAction("Action", null).show()
         }
+
+
+        binding.bottomAppBar.apply {
+            setNavigationOnClickListener {
+
+            }
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
